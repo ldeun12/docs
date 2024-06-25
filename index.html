@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>나만의 홈페이지</title>
+	<link rel="stylesheet" href="index1.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<p><h1></h1></p>
+		</header>
+		<section>
+			<p>WELCOME!</p>
+			<p>홈페이지에 오신걸 환영합니다.</p>
+		</section>
+
+        <form id="loginForm" onsubmit="return validateForm()">
+			<input type="text" placeholder="이름" id="username" name="username" required>
+			<input type="password" placeholder="학번" id="password" name="password" required>
+            <input type="submit" value="로그인">
+        </form>
+        <p id="error-message" class="error-message"></p>
+          <footer>
+            <p>인공지능공학부 20234340 이다은</p>
+        </footer>
+
+	</div>
+    <div id="popup" class="popup">
+        <p>로그인 성공!</p>
+    </div>
+	<script src="script.js"></script>
+</body>
+</html>
