@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>실습문제 10-5 시계만들기 입니다.</title>
+        <style>
+        div{
+            background-color: aliceblue;
+            font-size: 2em;
+            width: 50%;
+        }
+        </style>
+        <script>
+        function split(){
+            let div = document.getElementById("clock")
+            let now = new Date()
+            div.innerHTML = now.toLocaleString().split(" ").slice(3,5).join(" ")
+            setTimeout("split();", 1000)
+        }
+        </script>
+    </head>
+    <body onload="split()">
+        <h3>div 태그에 시계 만들기</h3>
+        <hr>
+        <div id="clock"></div>
+    </body>
+</html>

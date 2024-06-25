@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>실습문제 10-3(2) 입니다.</title>
+        <script>
+        //option은 selected당
+        function change(select){
+            let nWin = window.open("", "", "width = 400, height = 400, top = 50, left = 50")
+            nWin.location = select.options[select.selectedIndex].value
+        }
+        </script>
+    </head>
+    <body>
+        <h3>옵션 선택으로 사이트 접속</h3>
+        옵션 선택 마다 새 윈도우에 접속합니다.
+        <hr>
+        접속할 사이트
+        <form>
+            <select id="site" onchange="change(this)">
+                <option value="http://www.naver.com" >네이버</option>
+                <option value="http://www.google.com" >구글</option>
+                <option value="http://www.oracle.com" >오라클</option>
+            </select>
+        </form>
+    </body>
+
